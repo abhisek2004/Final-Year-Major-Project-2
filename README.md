@@ -34,6 +34,13 @@
 | 22CSE224 | Diptesh Narendra | 9827403823 |
 | 22CSE072 | Abhisek Panda    | 9078089401 |
 
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+
+## **📜 License**
+
+Academic project for **Gandhi Institute of Engineering and Technology University, Odisha** – Major Project-I.
+For educational and non-commercial use only.
+
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
