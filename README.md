@@ -38,7 +38,7 @@
 
 ## **📜 License**
 
-Academic project for **Gandhi Institute of Engineering and Technology University, Odisha** – Major Project-I.
+Academic project for **Gandhi Institute of Engineering and Technology University, Odisha** – Major Project-II.
 For educational and non-commercial use only.
 
 
