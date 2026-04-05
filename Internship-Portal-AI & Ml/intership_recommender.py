@@ -32,6 +32,8 @@ def _ensure_nltk_resources():
     # Newer NLTK versions may require `punkt_tab` for word tokenization.
     nltk.download('punkt_tab', quiet=True)
     nltk.download('averaged_perceptron_tagger', quiet=True)
+    # NLTK 3.9+ uses language-specific tagger data for English POS tagging.
+    nltk.download('averaged_perceptron_tagger_eng', quiet=True)
     nltk.download('wordnet', quiet=True)
     nltk.download('stopwords', quiet=True)
 
@@ -898,8 +900,13 @@ def lemmatize_sentence(sentence):
     """
     lemmatizer = WordNetLemmatizer()
 
-    # Part-of-speech tagging using NLTK
-    nltk_tagged = nltk.pos_tag(nltk.word_tokenize(sentence))
+    # Part-of-speech tagging using NLTK (NLTK 3.9+ needs averaged_perceptron_tagger_eng)
+    try:
+        nltk_tagged = nltk.pos_tag(nltk.word_tokenize(sentence))
+    except LookupError:
+        nltk.download('averaged_perceptron_tagger_eng', quiet=True)
+        nltk.download('averaged_perceptron_tagger', quiet=True)
+        nltk_tagged = nltk.pos_tag(nltk.word_tokenize(sentence))
 
     # Map NLTK POS tags to WordNet POS tags
     wordnet_tagged = map(lambda x: (x[0], nltk_pos_tagger(x[1])), nltk_tagged)
